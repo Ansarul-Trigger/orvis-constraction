@@ -1,0 +1,375 @@
+/* -------------------------
+   CSS RESET & VARIABLES
+-------------------------- */
+:root {
+  --primary: #111;
+  --secondary: #f4f4f4;
+  --accent: #caa24d;
+  --text: #333;
+  --white: #fff;
+  --max-width: 1100px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* -------------------------
+   BASE STYLES
+-------------------------- */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  background: #fff;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+
+.section .container p,
+.section .container ul {
+  max-width: 750px;  /* limit line length for readability */
+  margin: 0 auto 20px; /* center block and spacing */
+  line-height: 1.8; /* better line spacing */
+}
+
+.hero .container p {
+  max-width: 700px;
+  margin-bottom: 25px;
+}
+
+.section ul {
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+
+/* -------------------------
+   HEADER / NAVIGATION
+-------------------------- */
+.site-header {
+  background: var(--primary);
+  color: var(--white);
+  padding: 20px 0; /* give vertical spacing */
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  gap: 15px;
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+
+/* -------------------------
+   LOGO IMAGE
+-------------------------- */
+.logo img {
+  height: 60px; /* larger logo */
+  width: auto;
+  display: block;
+}
+
+/* Slightly smaller logo on mobile */
+@media (max-width: 768px) {
+  .logo img {
+    height: 34px;
+  }
+}
+
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* -------------------------
+   MOBILE NAV TOGGLE
+-------------------------- */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Mobile menu behavior */
+@media (max-width: 768px) {
+  .main-nav {
+    width: 100%;
+  }
+
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .main-nav ul.active {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+
+
+/* -------------------------
+   HERO
+-------------------------- */
+.hero {
+  background: var(--secondary);
+  padding: 80px 0;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.hero-text {
+  max-width: 700px;
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+}
+
+/* Page Hero */
+.page-hero {
+  background: #f4f4f4;
+  padding: 60px 0;
+}
+
+.page-hero h1 {
+  margin-bottom: 10px;
+}
+
+/* Narrow content for readability */
+.container.narrow {
+  max-width: 800px;
+}
+
+/* Two-column lists */
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+/* Improve list spacing */
+.section ul li {
+  margin-bottom: 6px;
+}
+
+
+/* -------------------------
+   SECTIONS
+-------------------------- */
+.section {
+  padding: 70px 0;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.section-light {
+  background: #fafafa;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+/* -------------------------
+   CTA
+-------------------------- */
+.cta {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta h2 {
+  margin-bottom: 10px;
+}
+
+/* -------------------------
+   BUTTONS
+-------------------------- */
+.btn-primary {
+  display: inline-block;
+  background: var(--white);
+  color: var(--primary);
+  padding: 12px 28px;
+  font-weight: 600;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+/* -------------------------
+   FOOTER
+-------------------------- */
+.site-footer {
+  background: #000;
+  color: #bbb;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 0.9rem;
+}
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.coming-soon {
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.success-message {
+  background: #e6f7ee;
+  border: 1px solid #2ecc71;
+  color: #1e8449;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+
+/* -------------------------
+   RESPONSIVE
+-------------------------- */
+@media (max-width: 768px) {
+  .site-header .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+}
+
+/* -------------------------
+   CONTACT PAGE
+-------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+}
+
+/* -------------------------
+   FORM STYLES
+-------------------------- */
+.contact-form form {
+  margin-top: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #111;
+}
+
+/* -------------------------
+   RESPONSIVE
+-------------------------- */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

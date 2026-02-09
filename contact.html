@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Contact Orvis Construction Inc. | Calgary Construction & Maintenance</title>
+  <meta name="description" content="Contact Orvis Construction Inc. for commercial construction, renovations, property maintenance,
+or emergency repairs across Calgary and Southern Alberta">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact Orvis Construction Inc.">
+  <meta property="og:description" content="Contact Orvis Construction Inc. for commercial construction, renovations, property maintenance,
+or emergency repairs across Calgary and Southern Alberta">
+  <meta property="og:type" content="website">
+
+   <!-- Favicon -->
+  <link rel="icon" href="assets/image/fab.jpg">
+
+  <!-- Styles -->
+   <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container">
+     <a href="/" class="logo" aria-label="Orvis Construction Inc.">
+  <img src="assets/image/ORVIS CONSTRUCTION LOGO.jpeg" alt="Orvis Construction Inc. logo">
+</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Contact Orvis Construction Inc.</h1>
+    <p>
+      Request a quote, site review, or maintenance support across
+      Calgary and Southern Alberta.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container contact-grid">
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>
+        Whether you’re planning a renovation, require ongoing maintenance support, or need help
+        resolving persistent building issues, Orvis Construction Inc. is ready to assist
+      </p>
+
+      <p><strong>Email:</strong><br>
+        <a href="mailto:contact@orviscontracting.com">contact@orviscontracting.com</a>
+      </p>
+
+      <p><strong>Phone:</strong><br>
+        <a href="tel:+14039931883">403-993-1883</a>
+      </p>
+
+      <p>
+        Serving <strong>Calgary and Southern Alberta,</strong>  including Okotoks, Airdrie, Cochrane, Canmore, Banff,
+        High River, Black Diamond, Turner Valley, Brooks, Red Deer, and Bragg Creek
+      </p>
+    </div>
+
+
+<!-- SUCCESS MESSAGE -->
+
+<div id="success-message" class="success-message" style="display:none;">
+  Thank you for contacting Orvis Construction Inc.  
+  We have received your message and will get back to you shortly.
+</div>
+
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2>Request a Quote or Site Review</h2>
+        <p> Contact us to request a quote, schedule a site review, or discuss safety-compliant construction
+          and maintenance services with transparent reporting.</p>
+      <form action="send-mail.php" method="POST" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input id="name" type="text" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Project Details</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+     <p><strong>Orvis Construction Inc.</strong></p>
+    <p>Calgary, Alberta, Canada</p>
+
+    <p>
+      🌐 Website:
+      <a href="https://orviscontracting.com" target="_blank" rel="noopener">
+        orviscontracting.com
+      </a>
+    </p>
+
+    <p>
+      📘 Facebook: <span class="coming-soon">Coming Soon</span><br>
+      📸 Instagram: <span class="coming-soon">Coming Soon</span>
+    </p>
+
+    <p>Phone: 403-993-1883 | Email: contact@orviscontracting.com</p>
+    <p>© Orvis Construction Inc. All rights reserved.</p>
+  </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('.main-nav ul');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('active');
+
+    toggle.textContent = isOpen ? '✕' : '☰';
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Close menu when a link is clicked (mobile)
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('active');
+      toggle.textContent = '☰';
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
